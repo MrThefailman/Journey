@@ -1,5 +1,15 @@
-﻿var MainController = angular.module("JourneyData", []);
+﻿var App = angular.module("JourneyData", ["ngRoute"]);
 
-MainController.controller("MainController", function ($scope) {
+App.config(
+    function ($routeProvider) {
+        $routeProvider
+            .when("/mainMenu", {
+                templateUrl: "Main.html",
+                controller: "MainController"
+            });
+    }
+);
+
+App.controller("MainController", function ($scope) {
 
 });

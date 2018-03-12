@@ -1,5 +1,13 @@
-﻿var JourneyController = angular.module("JourneyData", []);
+﻿App.config(
+    function ($routeProvider) {
+        $routeProvider
+            .when("/journey", {
+                templateUrl: "Journey.html",
+                controller: "JorneyController"
+            });
+    }
+);
 
-JourneyController.controller("JourneyController", function ($scope) {
+App.controller("JourneyController", function ($scope) {
 
 });

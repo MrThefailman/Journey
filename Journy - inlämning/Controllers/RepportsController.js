@@ -1,5 +1,13 @@
-﻿var RepportsController = angular.module("JourneyData", []);
+﻿App.config(
+    function ($routeProvider) {
+        $routeProvider
+            .when("/reports", {
+                templateUrl: "Repports.html",
+                controller: "RepportsController"
+            });
+    }
+);
 
-RepportsController.controller("RepportsController", function ($scope) {
+App.controller("RepportsController", function ($scope) {
 
 });

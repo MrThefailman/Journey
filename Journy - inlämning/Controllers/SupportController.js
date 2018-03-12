@@ -1,5 +1,13 @@
-﻿var SupportController = angular.module("JourneyData", []);
+﻿App.config(
+    function ($routeProvider) {
+        $routeProvider
+            .when("/support", {
+                templateUrl: "Support.html",
+                controller: "SupportController"
+            });
+    }
+);
 
-SupportController.controller("SupportController", function ($scope) {
+App.controller("SupportController", function ($scope) {
 
 });

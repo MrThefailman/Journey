@@ -1,5 +1,13 @@
-﻿var VehiclesController = angular.module("JourneyData", []);
+﻿App.config(
+    function ($routeProvider) {
+        $routeProvider
+            .when("/vehicles", {
+                templateUrl: "Vehicles.html",
+                controller: "VehiclesController"
+            });
+    }
+);
 
-VehiclesController.controller("SupportController", function ($scope) {
+App.controller("VehiclesController", function ($scope) {
 
 });
