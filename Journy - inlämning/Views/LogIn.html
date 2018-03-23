@@ -1,13 +1,38 @@
-﻿<div id="LoginBox" class="">
+﻿<div>
 
-    <div id="LoginUser">        
-        <div class="input-group-text">
-            <input id="Text1" class="align-content-center" type="text" placeholder="E-mail/Username..." />
+    <div id="containerBox" class="container border rounded" style="padding: 15px">
+
+        <div id="LoginBox" class="">
+            <h6 id="LoginText" class="text-nowrap">Logga in</h6>
+            <div id="LoginUser">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <input id="Text1" class="align-content-center form-control" type="text" placeholder="E-mail/Username..." />
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div id="LoginPassword">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <input id="Password1" class="align-content-center form-control" type="password" placeholder="Password..." />
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div id="userSubmit">
+                <div class="btn-group">
+                    <button ng-click="tryLogin()" id="LoginButton" class="btn btn-primary" type="submit">Logga in</button>
+                </div>
+            </div>
+
         </div>
+
     </div>
-    <br />
-    <div id="LoginPassword">
-        <input id="Password1" type="password" placeholder="Password..." />
+
+    <div id="LoginPic">
+        <href src=""></href>
     </div>
+
 
 </div>

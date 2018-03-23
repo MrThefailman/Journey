@@ -9,7 +9,11 @@
     }
 );
 
-App.controller("LoginController", function ($scope) {
+App.controller("LoginController", ["$scope", "$location", function ($scope, $location) {
+    $scope.tryLogin = function () {
+        $location.path("/Main");
+        
+    };
     
-});
+}]);
 

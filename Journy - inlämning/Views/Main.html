@@ -1,1 +1,63 @@
-﻿<p>Test</p>
+﻿<div id="containerBox" class="container border rounded" style="padding: 15px">
+    <div class="card-deck">
+            <div id="JorneyCard" class="card" ng-click="viewJourneys">
+                <div class="card-body">
+                    <h4 class="card-title text-center">Resor nr 1 2 3 </h4>
+                    <p class="card-text"><small class="text-muted">Senast uppdaterad: {{journeyUpdateTime}}</small></p>
+                </div>
+            </div>
+        <div id="VehiclesCard" class="card" ng-click="viewVehicles()">
+            <div class="card-body">
+                <h4 class="card-title text-center">Fordon</h4>
+                <p class="card-text"><small class="text-muted">Senast uppdaterad: {{vehiclesUpdateTime}}</small></p>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="card-deck">
+        <div id="RepportsCard" class="card" ng-click="viewRepports()">
+            <div class="card-body">
+                <h4 class="card-title text-center">Rapporter</h4>
+                <p class="card-text"><small class="text-muted">Senast uppdaterad: {{repportsUpdateTime}}</small></p>
+            </div>
+        </div>
+        <div id="SupportCard" class="card" ng-click="viewSupport()">
+            <div class="card-body">
+                <h4 class="card-title text-center">Support</h4>
+
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="card-group">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-header">Registrerad resa</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">{{journeyDestination}}</li>
+                <li class="list-group-item">{{journeyToDo}}</li>
+            </ul> 
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-header">Fordon</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">{{numberOfRegisteredVehicles}}</li>
+                <li class="list-group-item">{{standardVehicle}}</li>
+            </ul>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-header">Support Notifikationer</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">{{numberOfNotifications}}</li>
+                <li class="list-group-item">{{notificationFrom}}</li>
+            </ul>
+        </div>
+    </div>
+
+</div>

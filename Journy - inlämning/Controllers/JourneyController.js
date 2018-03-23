@@ -1,9 +1,9 @@
 ﻿App.config(
     function ($routeProvider) {
         $routeProvider
-            .when("/journey", {
+            .when("/Journey", {
                 templateUrl: "Journey.html",
-                controller: "JorneyController"
+                controller: "JourneyController"
             });
     }
 );
