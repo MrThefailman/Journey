@@ -1,7 +1,7 @@
 ﻿App.config(
     function ($routeProvider) {
         $routeProvider
-            .when("/reports", {
+            .when("/Repports", {
                 templateUrl: "Repports.html",
                 controller: "RepportsController"
             });

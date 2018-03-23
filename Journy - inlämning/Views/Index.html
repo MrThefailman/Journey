@@ -17,32 +17,41 @@
 </head>
 <body>
 
+    <div class="container">
 
-        <div id="navigationBar">
+        <div class="row">
+
+            <div class="col">
+
+                <div id="navigationBar">
 
 
-            <div class="nav navbar">
+                    <div class="nav navbar">
 
-                <div class="nav back-arrow">
-                    {{backArrow}}
+                        <div class="nav back-arrow">
+                            {{backArrow}}
+                        </div>
+
+                        <div class="nav navbar-text" style="color: dodgerblue;">
+                            <h1 class="">Journey</h1>
+                        </div>
+
+                        <div class="nav scroll-bar">
+                            {{scrollBar}}
+                        </div>
+
+                    </div>
                 </div>
 
-                <div class="nav navbar-text" style="color: dodgerblue;">
-                    <h1 class="">Journey</h1>
-                </div>
+                <ng-view>
 
-                <div class="nav scroll-bar">
-                    {{scrollBar}}
-                </div>
+                </ng-view>
 
             </div>
+
         </div>
 
-        <ng-view>
-
-        </ng-view>
-
-
+    </div>
 
 </body>
 </html>

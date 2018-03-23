@@ -10,7 +10,7 @@ App.config(
     }
 );
 
-App.controller("MainController", ["$scope", "$location", function ($scope, $location) {
+App.controller("MainController", function ($scope, $location) {
     
     $scope.viewJourneys = function () {
         $location.path("/Journey");
@@ -34,4 +34,4 @@ App.controller("MainController", ["$scope", "$location", function ($scope, $loca
 
     
 
-}]);
+});
