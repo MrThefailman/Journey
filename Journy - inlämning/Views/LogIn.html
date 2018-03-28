@@ -1,38 +1,46 @@
 ﻿<div>
 
-    <div id="containerBox" class="container border rounded" style="padding: 15px">
+    <form>
+        <div id="containerBox" class="container border rounded" style="padding: 15px">
 
-        <div id="LoginBox" class="">
-            <h6 id="LoginText" class="text-nowrap">Logga in</h6>
-            <div id="LoginUser">
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <input id="Text1" class="align-content-center form-control" type="text" placeholder="E-mail/Username..." />
+            <div id="LoginBox" class="">
+                <h6 id="LoginText" class="text-nowrap">Logga in</h6>
+                <div id="LoginUser">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <input id="LoginUserName" class="align-content-center form-control" type="text" placeholder="E-mail/Username..." required />
+                        </div>
                     </div>
                 </div>
-            </div>
-            <br />
-            <div id="LoginPassword">
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <input id="Password1" class="align-content-center form-control" type="password" placeholder="Password..." />
+                <br />
+                <div id="LoginPassword">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <input id="Password1" class="align-content-center form-control" type="password" placeholder="Password..." required />
+                        </div>
                     </div>
                 </div>
-            </div>
-            <br />
-            <div id="userSubmit">
-                <div class="btn-group">
-                    <button ng-click="tryLogin()" id="LoginButton" class="btn btn-primary" type="submit">Logga in</button>
+                <br />
+                <div id="userSubmit">
+                    <div class="btn-group">
+                        <button ng-click="tryLogin()" id="LoginButton" class="btn btn-primary" type="submit">Logga in</button>
+                    </div>
+                </div>
+                <br />
+                <label>
+                    <input type="checkbox" checked="checked" name="remember" /> Kom ihåg mig
+                </label>
+                <div class="text-right">
+                    <span class="pword"><a href="#">Glömt lösenord?</a></span>
                 </div>
             </div>
 
         </div>
 
-    </div>
-
-    <div id="LoginPic">
-        <href src=""></href>
-    </div>
-
+        <div id="LoginPic">
+            <href src=""></href>
+        </div>
+        
+    </form>
 
 </div>
