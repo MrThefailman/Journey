@@ -1,1 +1,53 @@
-﻿
+﻿<div>
+    <button class="btn btn-warning" ng-click="vehiclesToMain()">Meny</button>
+</div>
+
+<br />
+
+<div class="container border rounded" style="padding: 15px">
+    <div class="col-12">
+        <h2>Fordon</h2>
+        <br />
+        <div class="dropdown">
+            <button class="btn btn-light btn-lg btn-block border-dark dropdown-toggle" id="standardVehicleId" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                {{standardVehicle}}
+            </button>
+            <!--<div class="dropdown-menu" aria-labelledby="chooseVehicleId">
+                <div class="card clearfix">
+                    <ul class="list-group list-group-flush" ng-repeat="Vehicle in Vehicles">
+                        <li class="list-group-item">
+                            <div class="float-sm-left float-none">
+                                <a id="VehicleTest" class="dropdown-item" ng-click="chooseVehicleId(Vehicle.Id)">{{Vehicle.VehicleRegNr}}</a>
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>-->
+                <!--<a class="dropdown-item" ng-click="chooseLOL404()">LOL-404</a>
+                <a class="dropdown-item" ng-click="chooseREG123()">REG-123</a>-->
+            <!--</div>-->
+        </div>
+
+        <div class="container border-dark" style="padding: 0px">
+            <div id="listOfVehicles">
+                <div class="card clearfix">
+                    <ul class="list-group list-group-flush" ng-repeat="Vehicle in Vehicles">
+                        <li id="listVehicle{{Vehicle.Id}}" class="list-group-item">
+                                <div class="float-sm-left float-none">
+                                    {{Vehicle.VehicleRegNr}}
+                                </div>
+                                <div class="float-sm-right float-none">
+                                    <button class="btn btn-sm btn-danger float-right" ng-click="removeVehicle(Vehicle.Id)">
+                                        Delete
+                                    </button>
+                                </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-light btn-outline-primary btn-lg btn-block" ng-click="viewNewVehicle()">
+            Lägg till nytt fordon
+        </button>
+    </div>
+</div>

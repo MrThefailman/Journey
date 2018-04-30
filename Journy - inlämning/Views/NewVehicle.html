@@ -1,0 +1,30 @@
+﻿<br />
+<div>
+    <button class="btn btn-warning" ng-click="newVehiclesToVehicles()">Meny</button>
+</div>
+<br />
+<div class="col-8 offset-2">
+    <form name="makeNewVehicle" ng-submit="addNewVehicle()">
+        <div class="input-group">
+            
+            <input type="text" class="form-control" ng-model="vehicleType" placeholder="Typ av fordon" required/>
+        </div>
+        <br />
+        <div class="input-group">
+            <input type="text" class="form-control" ng-model="regNr" placeholder="Regestreringsnummer" required/>
+        </div>
+        <br />
+        <div class="input-group">
+            <input type="text" class="form-control" ng-model="vehicleBrand" placeholder="Märke" required/>
+        </div>
+        <br />
+        <!--<div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Bara temporärt:</span>
+            </div>
+            <input type="number" class="form-control" placeholder="Id för fordonet" />
+        </div>
+        <br />-->
+        <button type="submit" class="btn btn-success btn-block" ng-disabled="addNewVehicle.$invalid">Lägg till</button>
+    </form>
+</div>

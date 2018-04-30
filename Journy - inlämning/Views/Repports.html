@@ -1,1 +1,41 @@
-﻿
+﻿<div class="container border-dark">
+    <div class="row">
+        <div class="col-12">
+            <div class="dropdown">
+                <button class="btn btn-light btn-lg btn-block border-dark dropdown-toggle" id="chooseVehicleIdRepports" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    {{chooseVehicle}}
+                </button>
+                <div class="dropdown-menu" aria-labelledby="chooseVehicleId">
+                    <a class="dropdown-item" ng-click="LOL404()">LOL-404</a>
+                    <a class="dropdown-item" ng-click="REG123()">REG-123</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="row justify-content-around">
+        <div class="col-12 col-md-4">
+            <div class="input-group date">
+                <input type="date" class="form-control" />
+
+            </div>
+        </div>
+        <br />
+        <div class="col-12 col-md-4">
+            <div class="input-group date">
+                <input type="date" class="form-control" />
+
+            </div>
+        </div>
+    </div>
+    <br />
+    <div id="Chart">
+
+    </div>
+    <br />
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <button class="btn btn-primary btn-block">Spara som PDF</button>
+        </div>
+    </div>
+</div>

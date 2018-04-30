@@ -1,15 +1,85 @@
-﻿<div class="container border-dark">
-    <div class="dropdown">
-        <button class="btn btn-light btn-lg btn-block border-dark dropdown-toggle" id="chooseVehicleId" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            {{chooseVehicle}}
-        </button>
-        <div class="dropdown-menu" aria-labelledby="chooseVehicleId">
-            <a class="dropdown-item" href="#">LOL-404</a>
-            <a class="dropdown-item" href="#">REG-123</a>
+﻿<div class="col-12">
+    <div class="container border-dark">
+        <br />
+        <br />
+
+        <div>
+            <button class="btn btn-warning" ng-click="makeJourneyToJourney()">Resor</button>
         </div>
-    </div>
-    <div class="input-group date" id="journeyDatePicker">
-        <input type="date" class="form-control"/>
-        
+
+        <br />
+        <form name="submitJourneyForm" ng-submit="submitJourney()">
+            <div class="dropdown">
+                <!--<button class="btn btn-light btn-lg btn-block border-dark dropdown-toggle" id="chooseVehicleId" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" Required>
+                    {{chosenVehicle}}
+                </button>-->
+                <input class="btn btn-light btn-lg btn-block border-dark dropdown-toggle" type="button" data-toggle="dropdown" value="{{chosenVehicle}}" aria-haspopup="true"aria-expanded="true" required />
+                <div class="dropdown-menu" aria-labelledby="chooseVehicleId">
+
+                    <div class="card clearfix">
+                        <ul class="list-group list-group-flush" ng-repeat="Vehicle in Vehicles">
+                            <li id="listVehicle{{Vehicle.Id}}" class="list-group-item">
+                                <div class="float-sm-left float-none">
+                                    <button class="btn btn-secondary btn-sm" ng-click="chooseVehicle(Vehicle.VehicleRegNr)">
+                                        {{Vehicle.VehicleRegNr}}
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <br />
+            <div class="input-group date">
+                <input type="date" class="form-control" ng-model="date" required />
+
+            </div>
+            <br />
+            <div class="input-group" id="mileageStart">
+                <input type="text" class="form-control" placeholder="Mätarställning, Start" ng-model="milageStart" required />
+            </div>
+            <br />
+            <div class="input-group" id="mileageEnd">
+                <input type="text" class="form-control" placeholder="Mätarstälning, Ankomst" ng-model="milageEnd" />
+            </div>
+            <br />
+            <div class="input-group" id="distanceTraveled">
+                <input type="text" class="form-control" placeholder="Reslängd, KM (Detta ställs in automatiskt)" value="{{milageEnd - milageStart}}" ng-model="distanceTraveled" readonly />
+            </div>
+            <br />
+            <br />
+
+            <div class="input-group">
+                
+                <input type="text" class="form-control" placeholder="Start adress" ng-model="startAdress" required />
+                
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" ng-click="findMe()">Hitta mig</button>
+                </div>
+            </div>
+
+            <br />
+            <div class="input-group">
+                
+                <input type="text" class="form-control" placeholder="Ankomst adress" ng-model="endAdress" />
+                
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" ng-click="findMeEnd()">Hitta mig</button>
+                </div>
+            </div>
+            <br />
+            <br />
+            <div class="input-group" id="makeJourneyToDoList">
+                <textarea class="form-control" rows="3" placeholder="Ärende..." ng-model="matter" required ></textarea>
+            </div>
+            <br />
+            <div class="input-group" id="makeJourneyNotes">
+                <textarea class="form-control" rows="3" placeholder="Annteckningar..." ng-model="notes"></textarea>
+            </div>
+            <br />
+            <button class="btn btn-success btn-lg btn-block" type="submit" ng-disabled="submitJourney.$invalid">Spara</button>
+            <br />
+        </form>
     </div>
 </div>

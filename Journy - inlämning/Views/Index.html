@@ -8,12 +8,21 @@
     <script src="../Scripts/bootstrap.bundle.min.js"></script>
     <script src="../Scripts/angular.min.js"></script>
     <script src="../Scripts/angular-route.min.js"></script>
+    <script src="../Scripts/angular-material.min.js"></script>
+    <script src="../Scripts/angular-animate.min.js"></script>
+    <link href="../Content/angular-material.min.css" rel="stylesheet" />
     <script src="../Controllers/MainController.js"></script>
+    <script src="../Controllers/IndexController.js"></script>
     <script src="../Controllers/JourneyController.js"></script>
     <script src="../Controllers/LogInController.js"></script>
     <script src="../Controllers/RepportsController.js"></script>
     <script src="../Controllers/SupportController.js"></script>
     <script src="../Controllers/VehiclesController.js"></script>
+    <script src="../Controllers/SignUpController.js"></script>
+    <link rel="stylesheet/Less" type="text/css" href="../Less/StyleSheet.less" />
+    <script src="../Scripts/jquery.signalR-2.2.3.min.js"></script>
+    <script src="../signalR/hubs"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaywIdVFpQbcx45GJUHtyn2Ey7f3HqcHA"></script>
     <meta charset="utf-8" />
     <title></title>
 </head>
@@ -23,34 +32,18 @@
 
         <div class="row">
 
-            <div class="col">
+            <!--<div class="col offset-4">-->
 
-                <div id="navigationBar">
-
-                    <div class="nav navbar">
-
-                        <div class="nav back-arrow">
-                            {{backArrow}}
-                        </div>
-
-                        <div class="nav navbar-text" style="color: dodgerblue;">
-                            <h1 class="">Journey</h1>
-                        </div>
-
-                        <div class="nav scroll-bar">
-                            {{scrollBar}}
-                        </div>
-
-                    </div>
+                <div>
+                    <h1 id="Hea">Journey</h1>
                 </div>
 
-                <ng-view>
-
-                </ng-view>
-
-            </div>
-
+            <!--</div>-->
         </div>
+            <ng-view>
+
+            </ng-view>
+        
 
     </div>
 

@@ -1,0 +1,30 @@
+﻿<br />
+<div id="LoginUser">
+    <div class="col-6 offset-3">
+        <!--<div class="">
+            <input class="align-content-center form-control" type="text" placeholder="Förnamn..." required />
+        </div>
+        <br />
+        <div class="">
+            <input class="align-content-center form-control" type="text" placeholder="Efternamn..." required />
+        </div>-->
+        <br />
+        <form name="signUpForm" ng-submit="registerAccount()">
+            <div class="">
+                <input class="align-content-center form-control" type="text" ng-model="username" placeholder="Email..." required />
+            </div>
+            <br />
+            <div class="">
+                <input class="align-content-center form-control" type="text" ng-model="password" placeholder="Lösenord..." required />
+            </div>
+            <br />
+            <div class="">
+                <input class="align-content-center form-control" type="text" ng-model="passwordConfirm" placeholder="Lösenord igen..." required />
+            </div>
+            <br />
+            <div>
+                <button class="btn btn-success btn-block" type="submit" ng-disabled="registerAccount.$invalid">Registrera</button>
+            </div>
+        </form>
+    </div>
+</div>

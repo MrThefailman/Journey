@@ -14,6 +14,13 @@ App.controller("LoginController", ["$scope", "$location", function ($scope, $loc
         $location.path("/Main");
         
     };
+
+    $scope.signUp = function () {
+        $location.path("/SignUp");
+
+    };
+
     
+
 }]);
 

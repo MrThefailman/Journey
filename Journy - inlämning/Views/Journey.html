@@ -1,5 +1,7 @@
-﻿<div class="">
-
+﻿<div class="col-12">
+    <div>
+        <button class="btn btn-warning" ng-click="journeyToMain()">Meny</button>
+    </div>
     <br />
     <br />
     <div class="container border-bottom border-dark">
@@ -10,13 +12,29 @@
 
     </div>
     <div class="container">
-        <h1>Pågående resa:</h1>
+        <h1>Pågående resor:</h1>
         <br />
 
-        <button type="button" class="btn btn-light btn-block btn-lg btn-outline-secondary">Information om pågående resa</button>
-        <br />
+        <div class="container border-dark" style="padding: 0px">
+            <div id="listOfJourneys">
+                <div class="card clearfix">
+                    <ul class="list-group list-group-flush" ng-repeat="Journey in Journeys">
+                        <li id="listJourney{{Journey.Id}}" class="list-group-item">
+                            <div class="float-sm-left float-none">
+                                {{JorneyToDo}}
+                            </div>
+                            <!--<div class="float-sm-right float-none">
+                               
+                            </div>-->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-        <div id="journeyToDoContainer">
+        <!--<button type="button" class="btn btn-light btn-block btn-lg btn-outline-secondary">Information om pågående resor</button>
+        <br />-->
+        <!--<div id="journeyToDoContainer">
             <div class="form-group">
                 <textarea class="form-control" id="journeyToDo" rows="3" placeholder="Ärende..."></textarea>
             </div>
@@ -25,7 +43,7 @@
             <div class="form-group">
                 <textarea class="form-control" id="journeyNotes" rows="3" placeholder="Anteckningar..."></textarea>
             </div>
-        </div>
+        </div>-->
     </div>
 
 </div> 
