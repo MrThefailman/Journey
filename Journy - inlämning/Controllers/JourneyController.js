@@ -37,6 +37,14 @@ App.controller("JourneyController", function ($scope, $location, $http) {
     };
 
     $scope.makeJourneyToJourney = function () {
+
+        $location.path("/Journey");
+
+        
+    };
+
+    $scope.saveMakeJourney = function () {
+
         $http.post('/api/Journey', {
 
             ChosenVehicle: $scope.chosenVehicle,
@@ -53,13 +61,11 @@ App.controller("JourneyController", function ($scope, $location, $http) {
         }).then(function (response) {
 
             console.log(JSON.stringify(response));
-            //$location.path("/Journey");
+            $location.path("/Journey");
+
         });
-    };
 
-    $scope.saveMakeJourney = function () {
-
-        $location.path("/Journey");
+        
     };
 
     $scope.chosenVehicle = "Välj fordon";
@@ -120,6 +126,7 @@ App.controller("JourneyController", function ($scope, $location, $http) {
             });
 
         }
+        
         
     };
 
