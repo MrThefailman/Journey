@@ -11,7 +11,9 @@ App.config(
 );
 
 App.controller("MainController", function ($scope, $location) {
+
     
+
     $scope.viewJourneys = function () {
         $location.path("/Journey");
     };

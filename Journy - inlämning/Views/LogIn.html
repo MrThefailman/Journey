@@ -1,18 +1,18 @@
 ﻿<div>
 
-    <form>
         <div id="containerBox" class="container border rounded" style="padding: 15px">
 
             <div class="row">
 
                 <div class="col-12 col-md-6">
                     <div id="LoginBox" class="">
+
+                        <h6 id="LoginText" class="text-nowrap">Logga in</h6>
                         <form name="loginForm" ng-submit="login">
-                            <h6 id="LoginText" class="text-nowrap">Logga in</h6>
                             <div id="LoginUser">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
-                                        <input id="LoginUserName" class="align-content-center" type="text" placeholder="E-mail/Username..." ng-model="username" required />
+                                        <input id="LoginUserName" class="align-content-center form-control" type="text" placeholder="E-mail/Username..." ng-model="username" required />
                                     </div>
                                 </div>
                             </div>
@@ -20,29 +20,29 @@
                             <div id="LoginPassword">
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                        <input id="Password1" class="align-content-center" type="password" placeholder="Password..." ng-model="password" required />
+                                        <input id="Password1" class="align-content-center form-control" type="password" placeholder="Password..." ng-model="password" required />
                                     </div>
                                 </div>
                             </div>
                             <br />
-                            <div>
-                                <div id="userSubmit">
-                                    <div class="btn-group">
-                                        <button ng-click="tryLogin()" id="LoginButton" class="btn btn-primary" type="submit" ng-disabled="login.$invalid">Logga in</button>
-                                    </div>
+                            
+                            <div id="userSubmit">
+                                <div class="btn-group">
+                                    <button ng-click="tryLogin()" id="LoginButton" class="btn btn-primary" type="submit" ng-disabled="login.$invalid">Logga in</button>
                                 </div>
-                                <br />
-                                <!--<div>
-                                    <label>
-                                        <input type="checkbox" checked="checked" name="remember" /> Kom ihåg mig
-                                    </label>
-
-                                </div>-->
                             </div>
+                            <br />
+                                <!--<div>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember" /> Kom ihåg mig
+                </label>
+
+            </div>-->
+                         
                         </form>
                     </div>
                     <!-- SignUp -->
-                    <div class="col-12 col-md-6 align-self-end">
+                    <div class="col-12 col-md-6">
 
                         <button ng-click="signUp()" id="signUpButton" class="btn btn-success" type="button">Registrera</button>
                         
@@ -56,6 +56,4 @@
                 </div>
             </div>
         </div>
-    </form>
-
 </div>

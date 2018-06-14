@@ -8,41 +8,35 @@
     <div class="col-12">
         <h2>Fordon</h2>
         <br />
-        <div class="dropdown">
-            <button class="btn btn-light btn-lg btn-block border-dark dropdown-toggle" id="standardVehicleId" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                {{standardVehicle}}
-            </button>
-            <!--<div class="dropdown-menu" aria-labelledby="chooseVehicleId">
-                <div class="card clearfix">
-                    <ul class="list-group list-group-flush" ng-repeat="Vehicle in Vehicles">
-                        <li class="list-group-item">
-                            <div class="float-sm-left float-none">
-                                <a id="VehicleTest" class="dropdown-item" ng-click="chooseVehicleId(Vehicle.Id)">{{Vehicle.VehicleRegNr}}</a>
-
-                            </div>
-                        </li>
-                    </ul>
-                </div>-->
-                <!--<a class="dropdown-item" ng-click="chooseLOL404()">LOL-404</a>
-                <a class="dropdown-item" ng-click="chooseREG123()">REG-123</a>-->
-            <!--</div>-->
-        </div>
+        
 
         <div class="container border-dark" style="padding: 0px">
             <div id="listOfVehicles">
                 <div class="card clearfix">
-                    <ul class="list-group list-group-flush" ng-repeat="Vehicle in Vehicles">
-                        <li id="listVehicle{{Vehicle.Id}}" class="list-group-item">
-                                <div class="float-sm-left float-none">
-                                    {{Vehicle.VehicleRegNr}}
+                    
+                        <ul class="list-group list-group-flush" ng-repeat="Vehicle in Vehicles">
+                            <li id="listVehicle{{Vehicle.Id}}" class="list-group-item">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <input type="radio" ng-model="setStandard(Vehicle.Id)" name="standardVehicle" aria-label="Radio button for standard vehicle" />
+                                        </div>
+                                    </div>
+
+                                    <label class="input-group-text col-9">
+                                        {{Vehicle.VehicleRegNr}}
+                                    </label>
+
+                                    <div class="input-group-append">
+                                        <button class="btn btn-sm btn-danger float-right" ng-click="removeVehicle(Vehicle.Id)">
+                                            Delete
+                                        </button>
+                                    </div>
                                 </div>
-                                <div class="float-sm-right float-none">
-                                    <button class="btn btn-sm btn-danger float-right" ng-click="removeVehicle(Vehicle.Id)">
-                                        Delete
-                                    </button>
-                                </div>
-                        </li>
-                    </ul>
+
+                            </li>
+                        </ul>
+                    
                 </div>
             </div>
         </div>

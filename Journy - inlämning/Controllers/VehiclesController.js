@@ -13,9 +13,10 @@
     }
 );
 
-App.controller("VehiclesController", function ($scope, $location, $http) {
-
-    $http.get('/api/Vehicles', {
+App.controller("VehiclesController", function ($rootScope, $scope, $location, $http) {
+    
+    //Get
+    $http.get('/api/Vehicles', { headers: { 'Authorization': 'Bearer ' + $rootScope.token }
 
     }).then(function (response) {
 
@@ -28,7 +29,7 @@ App.controller("VehiclesController", function ($scope, $location, $http) {
 
     });
     
-
+    //Add new vehicle function
     $scope.addNewVehicle = function () {
 
         $scope.vehicleType;
@@ -49,6 +50,8 @@ App.controller("VehiclesController", function ($scope, $location, $http) {
         });
     };
 
+    //Delete vehicle function
+
     $scope.removeVehicle = function (i) {
 
         //var target = '#listVehicle' + i;
@@ -65,9 +68,17 @@ App.controller("VehiclesController", function ($scope, $location, $http) {
         });
         
     };
+
+    //Set standard vehicle
+
+    //$scope.setStandard = function (i) {
+    //    http.put('/api/Vehicles/' + i).then(function (response) {
+
+    //    });
+    //};
     
 
-    //$scope.ChooseVehicleId
+    //Buttons
 
     $scope.viewNewVehicle = function () {
         $location.path("/NewVehicle");

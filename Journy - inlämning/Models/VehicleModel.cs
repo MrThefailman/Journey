@@ -9,7 +9,6 @@ namespace Journy.Models
 {
     public class NewVehicle
     {
-        //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Display(Name = "Id")]
         public virtual int Id { get; set; }
 
@@ -24,5 +23,7 @@ namespace Journy.Models
         [Required]
         [Display(Name = "VehicleBrand")]
         public virtual string VehicleBrand { get; set; }
+
+
     }
 }

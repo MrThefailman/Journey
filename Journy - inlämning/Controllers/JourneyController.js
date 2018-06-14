@@ -43,7 +43,9 @@ App.controller("JourneyController", function ($scope, $location, $http) {
         
     };
 
-    $scope.saveMakeJourney = function () {
+    $scope.submitJourney = function () {
+
+        $scope.chosenVehicle
 
         $http.post('/api/Journey', {
 
